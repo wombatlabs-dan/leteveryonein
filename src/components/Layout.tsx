@@ -3,9 +3,24 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 
 const Logo = () => (
-  <Link to="/" aria-label="Let EveryOne In — Home" className="flex items-center gap-2">
+  <Link to="/" aria-label="Let EveryOne In — Home" className="flex items-center gap-2 text-foreground">
+    {/* Brand icon: person in doorway */}
+    <svg width="32" height="32" viewBox="0 0 64 64" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+      {/* Door frame */}
+      <path d="M12 4h28a2 2 0 0 1 2 2v52a2 2 0 0 1-2 2H12a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm2 4v48h24V8H14z" />
+      {/* Door panel (open, angled) */}
+      <path d="M38 8l14 4v40l-14 4V8z" opacity="0.7" />
+      {/* Door handle */}
+      <rect x="34" y="30" width="2" height="4" rx="1" />
+      {/* Person - head */}
+      <circle cx="24" cy="20" r="4" />
+      {/* Person - body */}
+      <path d="M24 26c-3 0-5.5 2.5-5.5 5.5V40h3v12h5V40h3v-8.5C29.5 28.5 27 26 24 26z" />
+      {/* Person - arms extended */}
+      <path d="M16 32h6v2.5h-6zM28 32h6v2.5h-6z" />
+    </svg>
     {/* Fix 2: SVG wordmark with outlined paths — no font loading needed */}
-    <svg width="180" height="28" viewBox="0 0 180 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img">
+    <svg width="160" height="28" viewBox="0 0 160 28" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
       <text
         x="0"
         y="21"
