@@ -21,7 +21,7 @@ const About = () => {
             <div>
               <div className="aspect-square rounded-md mb-8 border-4 border-brand-200 overflow-hidden">
                 <img
-                  alt="Dan Harrison, founder of Let EveryOne In"
+                  alt="Dan Harrison, founder of LetEveryoneIn"
                   className="w-full h-full object-cover object-top"
                   src="https://leteveryonein.com/assets/300x300_1775608612304-n6_Vlqes.png"
                 />
@@ -42,7 +42,7 @@ const About = () => {
                   As a founding employee at Razorfish San Francisco during the first dot-com era, Dan has been building for the web since its early days. He is deeply embedded in the San Francisco AI and design community.
                 </p>
                 <p>
-                  He founded Let EveryOne In with a singular mission: to bring enterprise-quality accessibility auditing to small businesses that are facing a crisis.
+                  He founded LetEveryoneIn with a singular mission: to bring enterprise-quality accessibility auditing to small businesses that are facing a crisis.
                 </p>
                 <p>
                   <strong>Training &amp; Credentials:</strong> Trained by Deque University, WebAIM, and Knowbility AccessU. DHS Trusted Tester v5 Certified, IAAP CPACC, IAAP WAS.

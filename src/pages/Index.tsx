@@ -150,7 +150,7 @@ const Index = () => {
           </div>
           <div className="border-t-2 border-brand-400 pt-8 text-center max-w-3xl mx-auto">
             <CircleCheck className="w-12 h-12 text-brand-600 mx-auto mb-4" aria-hidden="true" />
-            <h3 className="text-2xl font-bold mb-2">Let EveryOne In fills the gap.</h3>
+            <h3 className="text-2xl font-bold mb-2">LetEveryoneIn fills the gap.</h3>
             <p className="text-lg text-muted-foreground">
               Comprehensive audit + plain-English remediation playbook + implementation support.
               <br />
@@ -251,7 +251,7 @@ const Index = () => {
             <div className="md:col-span-4 flex justify-center">
               <div className="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-brand-200">
                 <img
-                  alt="Dan Harrison, founder of Let EveryOne In"
+                  alt="Dan Harrison, founder of LetEveryoneIn"
                   className="w-full h-full object-cover"
                   src="https://leteveryonein.com/assets/300x300_1775608612304-n6_Vlqes.png"
                 />
