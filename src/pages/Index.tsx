@@ -238,7 +238,7 @@ const Index = () => {
                 <img
                   alt="Dan Harrison, founder of LetEveryoneIn"
                   className="w-full h-full object-cover"
-                  src="https://leteveryonein.com/assets/300x300_1775608612304-n6_Vlqes.png"
+                  src="/dan-harrison.png"
                 />
               </div>
             </div>
