@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight, TriangleAlert, Check, ShieldAlert, CircleCheck } from "lucide-react";
+import { ArrowRight, TriangleAlert, ShieldAlert, CircleCheck } from "lucide-react";
 import Layout from "@/components/Layout";
 
 const Index = () => {
@@ -175,29 +175,16 @@ const Index = () => {
             {/* Card 1 — Panic Button */}
             <div className="rounded-2xl p-8 bg-background border border-border flex flex-col">
               <h3 className="text-2xl font-bold">Panic Button</h3>
-              <div className="text-3xl font-serif mt-2 text-foreground">$2,500</div>
-              <p className="text-accent-red font-medium text-sm mt-3">Best for: demand letter received this week</p>
-              <p className="text-muted-foreground text-sm mt-1">Timeline: 7 business days</p>
-              <ul className="mt-6 space-y-3 flex-1">
-                {[
-                  "Audit of 5–10 critical pages",
-                  "Top 20 issues prioritized by legal risk",
-                  "Quick-fix instructions",
-                  "Compliance posture statement",
-                  "1 check-in call",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" aria-hidden="true" />
-                    <span className="text-sm text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8 pt-6 border-t border-border">
+              <div className="text-3xl font-serif mt-2 text-brand-600">$2,500</div>
+              <p className="text-muted-foreground mt-4">
+                You got a demand letter this week. We'll find the top issues and give you a plan in 7 days.
+              </p>
+              <div className="mt-auto pt-6 border-t border-border">
                 <Link
-                  to="/contact"
+                  to="/services"
                   className="inline-flex items-center justify-center w-full font-medium border border-border bg-background h-12 rounded-md hover:bg-muted transition-colors"
                 >
-                  Select Plan
+                  View Details
                 </Link>
               </div>
             </div>
@@ -208,30 +195,16 @@ const Index = () => {
                 Most Popular
               </span>
               <h3 className="text-2xl font-bold">Fix It Right</h3>
-              <div className="text-3xl font-serif mt-2 text-foreground">$5,000</div>
-              <p className="font-medium text-sm mt-3">Best for: fix accessibility properly</p>
-              <p className="text-muted-foreground text-sm mt-1">Timeline: 8-week engagement</p>
-              <ul className="mt-6 space-y-3 flex-1">
-                {[
-                  "Audit of up to 30 pages (automated + NVDA/JAWS + keyboard + manual)",
-                  "Full remediation playbook with annotated screenshots",
-                  "Prioritized roadmap",
-                  "Weekly check-in calls (8 total)",
-                  "Compliance documentation package",
-                  "Overlay assessment and removal plan",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" aria-hidden="true" />
-                    <span className="text-sm text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8 pt-6 border-t border-border">
+              <div className="text-3xl font-serif mt-2 text-brand-600">$5,000</div>
+              <p className="text-muted-foreground mt-4">
+                Comprehensive audit with a step-by-step remediation playbook and 8 weeks of support.
+              </p>
+              <div className="mt-auto pt-6 border-t border-border">
                 <Link
-                  to="/contact"
+                  to="/services"
                   className="inline-flex items-center justify-center w-full font-medium bg-primary text-primary-foreground h-12 rounded-md hover:bg-brand-700 transition-colors"
                 >
-                  Select Plan
+                  View Details
                 </Link>
               </div>
             </div>
@@ -239,30 +212,16 @@ const Index = () => {
             {/* Card 3 — Stay Protected */}
             <div className="rounded-2xl p-8 bg-background border border-border flex flex-col">
               <h3 className="text-2xl font-bold">Stay Protected</h3>
-              <div className="text-3xl font-serif mt-2 text-foreground">$8,000</div>
-              <p className="text-accent-red font-medium text-sm mt-3">Best for: sued before or staying ahead</p>
-              <p className="text-muted-foreground text-sm mt-1">Timeline: 12-week + 1-year health check</p>
-              <ul className="mt-6 space-y-3 flex-1">
-                {[
-                  "Everything in Fix It Right + 50 pages",
-                  "iOS VoiceOver mobile testing",
-                  "Design-level recommendations",
-                  "Post-remediation QA audit",
-                  "1-year follow-up health check",
-                  "Ongoing compliance documentation",
-                ].map((item, i) => (
-                  <li key={i} className="flex items-start gap-2">
-                    <Check className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" aria-hidden="true" />
-                    <span className="text-sm text-foreground">{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className="mt-8 pt-6 border-t border-border">
+              <div className="text-3xl font-serif mt-2 text-brand-600">$8,000</div>
+              <p className="text-muted-foreground mt-4">
+                Full audit, design recommendations, post-launch QA, and a 1-year health check.
+              </p>
+              <div className="mt-auto pt-6 border-t border-border">
                 <Link
-                  to="/contact"
+                  to="/services"
                   className="inline-flex items-center justify-center w-full font-medium border border-border bg-background h-12 rounded-md hover:bg-muted transition-colors"
                 >
-                  Select Plan
+                  View Details
                 </Link>
               </div>
             </div>
