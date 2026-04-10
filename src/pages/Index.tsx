@@ -191,7 +191,7 @@ const Index = () => {
 
             {/* Card 2 — Fix It Right (highlighted) */}
             <div className="rounded-2xl p-8 bg-background border-2 border-primary shadow-md flex flex-col relative">
-              <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium">
+              <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium whitespace-nowrap">
                 Most Popular
               </span>
               <h3 className="text-2xl font-bold">Fix It Right</h3>
