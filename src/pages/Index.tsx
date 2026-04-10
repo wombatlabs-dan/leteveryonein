@@ -41,32 +41,26 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Fix 6 & 7: Stats — tight spacing, borderless cards with top rule divider */}
+      {/* Editorial claims — prose, not stats grid */}
       <section className="px-4 bg-background" style={{ paddingTop: 'var(--space-section-tight)', paddingBottom: 'var(--space-section-tight)' }}>
-        <div className="container mx-auto max-w-6xl">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl md:text-5xl font-serif font-bold tracking-tight mb-4">
-              The Accessibility Crisis Hitting Small Business
-            </h2>
-            <p className="text-xl text-muted-foreground">
-              The legal landscape has shifted. Small businesses are now the primary targets.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {[
-              { num: "10", unit: " min", text: "Every 10 minutes, a small business receives an ADA demand letter — that's 50,000+ per year." },
-              { num: "70", unit: "%", text: "64–70% of ADA website lawsuits target companies under $25M in revenue." },
-              { num: "#1", unit: "", text: "Restaurants are the #1 most-sued category, accounting for 35% of all filings." },
-              { num: "40", unit: "%", text: "40% of businesses that get sued get sued again." },
-            ].map((stat, i) => (
-              <div key={i} className="pt-6 border-t-2 border-brand-300">
-                <div className="text-4xl font-bold text-brand-600 mb-4">
-                  {stat.num}
-                  {stat.unit && <span className="text-xl text-muted-foreground font-normal">{stat.unit}</span>}
-                </div>
-                <p className="text-foreground font-medium">{stat.text}</p>
-              </div>
-            ))}
+        <div className="container mx-auto max-w-3xl">
+          <div className="space-y-12">
+            <div>
+              <p className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                Audits ship in ten business days, not six weeks.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                Panic Button clients get their top-20 issue list and documentation for their attorney within ten business days of kickoff. Fix It Right is an eight-week engagement with weekly check-ins.
+              </p>
+            </div>
+            <div>
+              <p className="text-xl md:text-2xl font-bold text-foreground mb-3">
+                Every client so far has been a small e-commerce shop or restaurant in NY, FL, CA, or IL.
+              </p>
+              <p className="text-lg text-muted-foreground leading-relaxed">
+                That's the profile ADA demand letters target — $500K to $25M in annual revenue, no in-house legal, running Shopify or WordPress or Squarespace. If that's you, we've seen your situation before.
+              </p>
+            </div>
           </div>
         </div>
       </section>

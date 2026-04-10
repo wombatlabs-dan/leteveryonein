@@ -5,60 +5,58 @@
 /* 
   Design System — Let EveryOne In
   Brand: Burnt Sienna / Ochre primary, warm red accent
-  Body: Atkinson Hyperlegible (Google Fonts)
+  Body: Atkinson Hyperlegible (Google Fonts — loaded via <link> in index.html)
   Headlines: Georgia
-  All colors HSL, derived from OKLCH ramp mentally mapped to HSL equivalents.
+  All colors OKLCH, perceptually uniform lightness steps.
   No pure #000 or #fff — always warm-tinted.
 */
 
-@import url('https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&display=swap');
-
 @layer base {
   :root {
-    /* Brand: Burnt Sienna / Ochre ramp (hue ~25-30 in HSL, warm earth) */
-    --brand-50: 30 60% 97%;
-    --brand-100: 28 55% 93%;
-    --brand-200: 27 50% 84%;
-    --brand-300: 26 45% 72%;
-    --brand-400: 25 42% 58%;
-    --brand-500: 24 50% 42%;
-    --brand-600: 22 55% 35%;
-    --brand-700: 20 58% 28%;
-    --brand-800: 18 55% 22%;
-    --brand-900: 16 50% 16%;
-    --brand-950: 14 45% 10%;
+    /* Brand: Burnt Sienna / Ochre ramp (OKLCH, hue ~55) */
+    --brand-50: oklch(0.98 0.02 55);
+    --brand-100: oklch(0.95 0.03 55);
+    --brand-200: oklch(0.88 0.05 55);
+    --brand-300: oklch(0.78 0.08 55);
+    --brand-400: oklch(0.67 0.10 55);
+    --brand-500: oklch(0.56 0.12 55);
+    --brand-600: oklch(0.49 0.11 55);
+    --brand-700: oklch(0.42 0.10 55);
+    --brand-800: oklch(0.35 0.08 55);
+    --brand-900: oklch(0.28 0.05 55);
+    --brand-950: oklch(0.22 0.03 55);
 
-    /* Red accent ramp (warm red, committed) */
-    --accent-red-light: 4 65% 94%;
-    --accent-red: 4 72% 50%;
-    --accent-red-dark: 4 65% 38%;
-    --accent-red-950: 4 50% 18%;
+    /* Red accent ramp (OKLCH, hue ~25) */
+    --accent-red-light: oklch(0.95 0.03 25);
+    --accent-red: oklch(0.57 0.20 25);
+    --accent-red-dark: oklch(0.47 0.16 25);
+    --accent-red-950: oklch(0.28 0.06 25);
 
-    /* Warm-tinted neutrals (chroma toward hue 30, never pure) */
-    --neutral-50: 35 25% 97%;
-    --neutral-100: 33 18% 94%;
-    --neutral-200: 30 14% 88%;
-    --neutral-300: 28 12% 78%;
-    --neutral-400: 25 8% 56%;
-    --neutral-500: 22 7% 42%;
-    --neutral-600: 20 8% 32%;
-    --neutral-700: 18 10% 24%;
-    --neutral-800: 16 12% 17%;
-    --neutral-900: 14 14% 12%;
-    --neutral-950: 12 16% 8%;
+    /* Warm-tinted neutrals (OKLCH, very low chroma, hue ~55) */
+    --neutral-50: oklch(0.98 0.005 55);
+    --neutral-100: oklch(0.96 0.005 55);
+    --neutral-200: oklch(0.91 0.008 55);
+    --neutral-300: oklch(0.83 0.010 55);
+    --neutral-400: oklch(0.64 0.010 55);
+    --neutral-500: oklch(0.52 0.010 55);
+    --neutral-600: oklch(0.43 0.010 55);
+    --neutral-700: oklch(0.36 0.012 55);
+    --neutral-800: oklch(0.29 0.012 55);
+    --neutral-900: oklch(0.24 0.012 55);
+    --neutral-950: oklch(0.19 0.010 55);
 
     /* Semantic tokens */
     --background: var(--neutral-50);
     --foreground: var(--neutral-900);
 
-    --card: 35 20% 99%;
+    --card: oklch(0.99 0.003 55);
     --card-foreground: var(--neutral-900);
 
-    --popover: 35 20% 99%;
+    --popover: oklch(0.99 0.003 55);
     --popover-foreground: var(--neutral-900);
 
     --primary: var(--brand-600);
-    --primary-foreground: 35 25% 97%;
+    --primary-foreground: oklch(0.98 0.005 55);
 
     --secondary: var(--neutral-100);
     --secondary-foreground: var(--neutral-800);
@@ -70,13 +68,16 @@
     --accent-foreground: var(--brand-800);
 
     --destructive: var(--accent-red);
-    --destructive-foreground: 35 25% 97%;
+    --destructive-foreground: oklch(0.98 0.005 55);
 
     --border: var(--neutral-200);
     --input: var(--neutral-200);
     --ring: var(--brand-500);
 
     --radius: 0.375rem;
+
+    /* Ring offset — warm tinted, not pure white */
+    --tw-ring-offset-color: var(--neutral-50);
 
     /* Chart tokens — brand-compatible */
     --chart-1: var(--brand-500);
@@ -94,7 +95,7 @@
     --sidebar-background: var(--neutral-50);
     --sidebar-foreground: var(--neutral-700);
     --sidebar-primary: var(--brand-600);
-    --sidebar-primary-foreground: 35 25% 97%;
+    --sidebar-primary-foreground: oklch(0.98 0.005 55);
     --sidebar-accent: var(--neutral-100);
     --sidebar-accent-foreground: var(--neutral-800);
     --sidebar-border: var(--neutral-200);
@@ -138,7 +139,7 @@
 
   /* Fix 1: Global :focus-visible — highest brand-credibility win */
   :focus-visible {
-    outline: 3px solid hsl(var(--brand-500));
+    outline: 3px solid var(--brand-500);
     outline-offset: 3px;
     border-radius: inherit;
   }
@@ -159,7 +160,7 @@
     @apply text-2xl font-bold mt-12 mb-4;
     letter-spacing: -0.03em;
     line-height: 1.18;
-    color: hsl(var(--foreground));
+    color: var(--foreground);
   }
 
   .prose h3 {
@@ -167,17 +168,17 @@
     @apply text-xl font-bold mt-8 mb-3;
     letter-spacing: -0.03em;
     line-height: 1.25;
-    color: hsl(var(--foreground));
+    color: var(--foreground);
   }
 
   .prose p {
     @apply mb-6 leading-relaxed;
-    color: hsl(var(--neutral-700));
+    color: var(--neutral-700);
   }
 
   .prose ul, .prose ol {
     @apply mb-6 pl-6 space-y-2;
-    color: hsl(var(--neutral-700));
+    color: var(--neutral-700);
   }
 
   .prose ul {
@@ -193,17 +194,17 @@
   }
 
   .prose a {
-    color: hsl(var(--brand-600));
+    color: var(--brand-600);
     text-decoration: underline;
     text-underline-offset: 3px;
   }
 
   .prose a:hover {
-    color: hsl(var(--brand-700));
+    color: var(--brand-700);
   }
 
   .prose strong {
-    color: hsl(var(--foreground));
+    color: var(--foreground);
     font-weight: 700;
   }
 
@@ -213,6 +214,6 @@
 
   .prose .lead {
     @apply text-xl leading-relaxed;
-    color: hsl(var(--muted-foreground));
+    color: var(--muted-foreground);
   }
 }
