@@ -15,10 +15,8 @@ jobs:
           fetch-depth: 0
 
       - name: Push to leteveryonein
-        env:
-          SYNC_TOKEN: ${{ secrets.SYNC_TOKEN }}
         run: |
           git config user.email "actions@github.com"
           git config user.name "GitHub Actions"
-          git remote add target https://x-access-token:${SYNC_TOKEN}@github.com/steadfast-a11y/leteveryonein.git
+          git remote add target https://x-access-token:${{ secrets.SYNC_TOKEN }}@github.com/steadfast-a11y/leteveryonein.git
           git push target main --force
