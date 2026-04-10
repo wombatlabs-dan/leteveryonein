@@ -23,7 +23,7 @@ const About = () => {
                 <img
                   alt="Dan Harrison, founder of LetEveryoneIn"
                   className="w-full h-full object-cover object-top"
-                  src="https://leteveryonein.com/assets/300x300_1775608612304-n6_Vlqes.png"
+                  src="/dan-harrison.png"
                 />
               </div>
               <div className="flex flex-wrap gap-2">
