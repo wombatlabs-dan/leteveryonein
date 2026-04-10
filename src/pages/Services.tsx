@@ -40,69 +40,104 @@ const Services = () => {
         </div>
       </section>
 
-      {/* Pricing comparison table */}
+      {/* Pricing cards */}
       <section className="px-4 bg-muted/30 border-y border-border" style={{ paddingTop: 'var(--space-section)', paddingBottom: 'var(--space-section)' }}>
-        <div className="container mx-auto max-w-6xl">
-          <div className="overflow-x-auto">
-            <table className="w-full border border-border text-left">
-              <thead>
-                <tr className="bg-muted">
-                  <th className="p-6 text-sm font-medium text-muted-foreground uppercase tracking-wider border-r border-border w-1/4">Feature</th>
-                  <th className="p-6 border-r border-border w-1/4">
-                    <div className="text-xl font-bold text-foreground">Panic Button</div>
-                    <div className="text-3xl font-serif mt-1 text-brand-600">$2,500</div>
-                    <p className="text-sm font-medium text-accent-red mt-2">Best for: demand letter received this week</p>
-                    <p className="text-muted-foreground text-sm mt-1">Timeline: 7 business days</p>
-                  </th>
-                  <th className="p-6 border-r border-border w-1/4 bg-brand-50">
-                    <div className="text-xl font-bold text-foreground">Fix It Right</div>
-                    <div className="text-3xl font-serif mt-1 text-brand-600">$5,000</div>
-                    <p className="text-sm font-medium text-brand-600 mt-2">Best for: fix accessibility properly</p>
-                    <p className="text-muted-foreground text-sm mt-1">Timeline: 8-week engagement</p>
-                  </th>
-                  <th className="p-6 w-1/4">
-                    <div className="text-xl font-bold text-foreground">Stay Protected</div>
-                    <div className="text-3xl font-serif mt-1 text-brand-600">$8,000</div>
-                    <p className="text-sm font-medium text-muted-foreground mt-2">Best for: sued before or staying ahead</p>
-                    <p className="text-muted-foreground text-sm mt-1">Timeline: 12-week + 1-year health check</p>
-                  </th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-border">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {/* Card 1 — Panic Button */}
+            <div className="rounded-2xl p-8 bg-background border border-border flex flex-col">
+              <h3 className="text-2xl font-bold">Panic Button</h3>
+              <div className="text-3xl font-serif mt-2 text-foreground">$2,500</div>
+              <p className="text-accent-red font-medium text-sm mt-3">Best for: demand letter received this week</p>
+              <p className="text-muted-foreground text-sm mt-1">Timeline: 7 business days</p>
+              <ul className="mt-6 space-y-3 flex-1">
                 {[
-                  { feature: "Pages audited", panic: "5–10 critical", fix: "Up to 30", stay: "Up to 50" },
-                  { feature: "Automated scanning", panic: true, fix: true, stay: true },
-                  { feature: "Screen reader testing (NVDA/JAWS)", panic: false, fix: true, stay: true },
-                  { feature: "Keyboard testing", panic: false, fix: true, stay: true },
-                  { feature: "iOS VoiceOver mobile testing", panic: false, fix: false, stay: true },
-                  { feature: "Prioritized issue list", panic: "Top 20", fix: "Full", stay: "Full" },
-                  { feature: "Remediation playbook", panic: "Quick-fix instructions", fix: "Full with annotated screenshots", stay: "Full with annotated screenshots" },
-                  { feature: "Prioritized roadmap", panic: false, fix: true, stay: true },
-                  { feature: "Design-level recommendations", panic: false, fix: false, stay: true },
-                  { feature: "Check-in calls", panic: "1", fix: "8 weekly", stay: "12 weekly" },
-                  { feature: "Compliance documentation package", panic: true, fix: true, stay: true },
-                  { feature: "Post-remediation QA audit", panic: false, fix: false, stay: true },
-                  { feature: "1-year follow-up health check", panic: false, fix: false, stay: true },
-                  { feature: "Overlay assessment & removal plan", panic: false, fix: true, stay: true },
-                  { feature: "Ongoing compliance documentation", panic: false, fix: false, stay: true },
-                ].map((row, i) => (
-                  <tr key={i} className="hover:bg-muted/30">
-                    <td className="p-4 text-sm font-medium text-foreground border-r border-border">{row.feature}</td>
-                    {[row.panic, row.fix, row.stay].map((val, j) => (
-                      <td key={j} className={`p-4 text-sm text-center border-r border-border last:border-r-0 ${j === 1 ? 'bg-brand-50/50' : ''}`}>
-                        {val === true ? (
-                          <Check className="w-5 h-5 text-brand-600 mx-auto" aria-label="Included" />
-                        ) : val === false ? (
-                          <span className="text-neutral-400" aria-label="Not included">—</span>
-                        ) : (
-                          <span className="text-foreground">{val}</span>
-                        )}
-                      </td>
-                    ))}
-                  </tr>
+                  "Audit of 5–10 critical pages",
+                  "Top 20 issues prioritized by legal risk",
+                  "Quick-fix instructions",
+                  "Compliance posture statement",
+                  "1 check-in call",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" aria-hidden="true" />
+                    <span className="text-sm text-foreground">{item}</span>
+                  </li>
                 ))}
-              </tbody>
-            </table>
+              </ul>
+              <div className="mt-8 pt-6 border-t border-border">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center w-full font-medium border border-border bg-background h-12 rounded-md hover:bg-muted transition-colors"
+                >
+                  Select Plan
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 2 — Fix It Right (highlighted) */}
+            <div className="rounded-2xl p-8 bg-background border-2 border-primary shadow-md flex flex-col relative">
+              <span className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-primary text-primary-foreground px-4 py-1 rounded-full text-sm font-medium whitespace-nowrap">
+                Most Popular
+              </span>
+              <h3 className="text-2xl font-bold">Fix It Right</h3>
+              <div className="text-3xl font-serif mt-2 text-foreground">$5,000</div>
+              <p className="font-medium text-sm mt-3">Best for: fix accessibility properly</p>
+              <p className="text-muted-foreground text-sm mt-1">Timeline: 8-week engagement</p>
+              <ul className="mt-6 space-y-3 flex-1">
+                {[
+                  "Audit of up to 30 pages (automated + NVDA/JAWS + keyboard + manual)",
+                  "Full remediation playbook with annotated screenshots",
+                  "Prioritized roadmap",
+                  "Weekly check-in calls (8 total)",
+                  "Compliance documentation package",
+                  "Overlay assessment and removal plan",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" aria-hidden="true" />
+                    <span className="text-sm text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 pt-6 border-t border-border">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center w-full font-medium bg-primary text-primary-foreground h-12 rounded-md hover:bg-brand-700 transition-colors"
+                >
+                  Select Plan
+                </Link>
+              </div>
+            </div>
+
+            {/* Card 3 — Stay Protected */}
+            <div className="rounded-2xl p-8 bg-background border border-border flex flex-col">
+              <h3 className="text-2xl font-bold">Stay Protected</h3>
+              <div className="text-3xl font-serif mt-2 text-foreground">$8,000</div>
+              <p className="text-accent-red font-medium text-sm mt-3">Best for: sued before or staying ahead</p>
+              <p className="text-muted-foreground text-sm mt-1">Timeline: 12-week + 1-year health check</p>
+              <ul className="mt-6 space-y-3 flex-1">
+                {[
+                  "Everything in Fix It Right + 50 pages",
+                  "iOS VoiceOver mobile testing",
+                  "Design-level recommendations",
+                  "Post-remediation QA audit",
+                  "1-year follow-up health check",
+                  "Ongoing compliance documentation",
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-2">
+                    <Check className="w-5 h-5 text-brand-600 shrink-0 mt-0.5" aria-hidden="true" />
+                    <span className="text-sm text-foreground">{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8 pt-6 border-t border-border">
+                <Link
+                  to="/contact"
+                  className="inline-flex items-center justify-center w-full font-medium border border-border bg-background h-12 rounded-md hover:bg-muted transition-colors"
+                >
+                  Select Plan
+                </Link>
+              </div>
+            </div>
           </div>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-10">
