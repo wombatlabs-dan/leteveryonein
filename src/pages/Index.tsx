@@ -248,21 +248,10 @@ const Index = () => {
               </h2>
               <div className="space-y-6 text-lg text-foreground">
                 <p>
-                  Led by <strong>Dan Harrison</strong> — 13 years as Executive Director of UX Design at JPMorgan Chase, where he led accessibility strategy across enterprise digital products.
+                  Led by <strong>Dan Harrison</strong> — 13 years as Executive Director of UX Design at JPMorgan Chase, overseeing design teams whose work was held to enterprise WCAG and Section 508 conformance standards.
                 </p>
-                <div className="flex flex-wrap gap-3">
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-sm font-medium">
-                    DHS Trusted Tester v5 Certified
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-sm font-medium">
-                    IAAP CPACC
-                  </span>
-                  <span className="inline-flex items-center px-3 py-1 rounded-full bg-brand-100 text-brand-700 text-sm font-medium">
-                    IAAP WAS
-                  </span>
-                </div>
                 <p className="text-muted-foreground">
-                  Trained by Deque University, WebAIM, and Knowbility AccessU.
+                  Trained by Deque University, WebAIM, and Knowbility AccessU. Actively pursuing IAAP CPACC, IAAP WAS, and DHS Trusted Tester v5 certifications in 2026.
                 </p>
                 {/* Fix 10: Pull-quote — larger Georgia, em-dash attribution, no left border */}
                 <blockquote className="mt-8">
