@@ -26,17 +26,17 @@ const About = () => {
                   src="/dan-harrison.png"
                 />
               </div>
-              <div className="flex flex-wrap gap-2">
-                <span className="px-3 py-1 bg-brand-100 text-brand-700 rounded-full text-xs font-medium">DHS Trusted Tester v5</span>
-                <span className="px-3 py-1 bg-brand-100 text-brand-700 rounded-full text-xs font-medium">IAAP CPACC</span>
-                <span className="px-3 py-1 bg-brand-100 text-brand-700 rounded-full text-xs font-medium">IAAP WAS</span>
-              </div>
+              {/* Credential badges removed pending exam completion in 2026.
+                  Re-add each one only after passing the exam:
+                    - DHS Trusted Tester v5 — exam scheduled June 2026
+                    - IAAP CPACC — exam scheduled May 2026
+                    - IAAP WAS — exam scheduled June/July 2026 */}
             </div>
             <div>
               <h2 className="text-3xl font-serif font-bold text-foreground mt-0 mb-6">Dan Harrison</h2>
               <div className="space-y-4 text-lg text-neutral-700">
                 <p className="text-xl text-muted-foreground">
-                  13 years as Executive Director of UX Design at JPMorgan Chase — led multi-disciplinary design teams and pioneered accessibility strategy across enterprise digital products.
+                  13 years as Executive Director of UX Design at JPMorgan Chase — led multi-disciplinary design teams across enterprise digital products held to WCAG and Section 508 conformance standards.
                 </p>
                 <p>
                   As a founding employee at Razorfish San Francisco during the first dot-com era, Dan has been building for the web since its early days. He is deeply embedded in the San Francisco AI and design community.
@@ -45,7 +45,7 @@ const About = () => {
                   He founded LetEveryoneIn with a singular mission: to bring enterprise-quality accessibility auditing to small businesses that are facing a crisis.
                 </p>
                 <p>
-                  <strong>Training &amp; Credentials:</strong> Trained by Deque University, WebAIM, and Knowbility AccessU. DHS Trusted Tester v5 Certified, IAAP CPACC, IAAP WAS.
+                  <strong>Training:</strong> Deque University, WebAIM Virtual Training, Knowbility AccessU. <strong>Certifications in progress (2026):</strong> IAAP CPACC, IAAP WAS, DHS Trusted Tester v5.
                 </p>
               </div>
             </div>
